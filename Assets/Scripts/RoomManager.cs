@@ -15,8 +15,8 @@ public class RoomManager : MonoBehaviour
     int roomHeight = 12;
 
     //Size of grid that contains the rooms
-    int gridSizeX = 10;
-    int gridSizeY = 10;
+    [SerializeField] int gridSizeX = 10;
+    [SerializeField] int gridSizeY = 10;
 
     private List<GameObject> roomObjects = new List<GameObject>();
 
@@ -52,7 +52,13 @@ public class RoomManager : MonoBehaviour
             TryGenerateRoom(new Vector2Int(gridX + 1, gridY));
             TryGenerateRoom(new Vector2Int(gridX, gridY + 1));
             TryGenerateRoom(new Vector2Int(gridX, gridY - 1));
-        } else if (!generationComplete)
+        }
+        else if (roomCount < minRooms)
+        {
+            Debug.Log("RoomCount was less than the mininum amount of rooms. Trying again");
+            RegenerateRooms();
+        }
+        else if (!generationComplete)
         {
             Debug.Log($"Generation complete, {roomCount} rooms created");
             generationComplete = true;
@@ -83,6 +89,10 @@ public class RoomManager : MonoBehaviour
 
         if (Random.value < 0.5f && roomIndex != Vector2Int.zero)
             return false;
+
+        if (CountAdjacentRooms(roomIndex) > 1)
+            return false;
+
         roomQueue.Enqueue(roomIndex);
         roomGrid[x, y] = 1;
         roomCount++;
@@ -92,8 +102,85 @@ public class RoomManager : MonoBehaviour
         newRoom.name = $"Room-{roomCount}";
         roomObjects.Add(newRoom);
 
+        OpenDoors(newRoom, x, y);
+
         return true;
     }
+
+    // Clear all rooms and try again
+    private void RegenerateRooms()
+    {
+        roomObjects.ForEach(Destroy);
+        roomObjects.Clear();
+        roomGrid = new int[gridSizeX, gridSizeY];
+        roomQueue.Clear();
+        roomCount = 0;
+        generationComplete = false;
+
+        Vector2Int initialRoomIndex = new Vector2Int(gridSizeX / 2, gridSizeY / 2);
+        StartRoomGenerationFromRoom(initialRoomIndex);
+    }
+
+    void OpenDoors(GameObject room, int x, int y)
+    {
+        Room newRoomScript = room.GetComponent<Room>();
+
+        //Neighbours
+        Room leftRoomScript = GetRoomScriptAt(new Vector2Int(x - 1, y));
+        Room rightRoomScript = GetRoomScriptAt(new Vector2Int(x + 1, y));
+        Room topRoomScript = GetRoomScriptAt(new Vector2Int(x, y + 1));
+        Room bottomRoomScript = GetRoomScriptAt(new Vector2Int(x, y - 1));
+
+        // Determine which doors to open based on the direction
+        if (x > 0 && roomGrid[x - 1, y] != 0)
+        {
+            //Left
+            newRoomScript.OpenDoor(Vector2Int.left);
+            leftRoomScript.OpenDoor(Vector2Int.right);
+        }
+        if (x < gridSizeX - 1 && roomGrid[x + 1, y] != 0)
+        {
+            //Right
+            newRoomScript.OpenDoor(Vector2Int.right);
+            leftRoomScript.OpenDoor(Vector2Int.left);
+        }
+        if (y > 0 && roomGrid[x, y - 1] != 0)
+        {
+            //Down
+            newRoomScript.OpenDoor(Vector2Int.down);
+            leftRoomScript.OpenDoor(Vector2Int.up);
+        }
+        if (y < gridSizeY - 1 && roomGrid[x, y + 1] != 0)
+        {
+            //Up
+            newRoomScript.OpenDoor(Vector2Int.up);
+            leftRoomScript.OpenDoor(Vector2Int.down);
+        }
+    }
+
+    Room GetRoomScriptAt(Vector2Int index)
+    {
+        GameObject roomObject = roomObjects.Find(r => r.GetComponent<Room>().RoomIndex == index);
+        if(roomObject != null)
+            return roomObject.GetComponent<Room>();
+        return null;
+    }
+
+    private int CountAdjacentRooms(Vector2Int roomIndex)
+    {
+        int x = roomIndex.x;
+        int y = roomIndex.y;
+        int count = 0;
+
+        if (x > 0 && roomGrid[x - 1, y] != 0) count++; //Left neighbor
+        if (x < gridSizeX - 1 && roomGrid[x + 1, y] != 0) count++; //Right neighbor
+        if (y > 0 && roomGrid[x, y - 1] != 0) count++; //Bottom neighbor
+        if ( y < gridSizeY - 1 && roomGrid[x, y + 1] != 0) count++; // Above neighbor
+
+
+        return count;
+    }
+
     private Vector3 GetPositionFromGridIndex(Vector2Int gridIndex)
     {
         int gridX = gridIndex.x;
