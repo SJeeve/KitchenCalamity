@@ -167,6 +167,8 @@ MonoBehaviour:
   roomPrefab: {fileID: 4080586462289575190, guid: 04f40f4e1ce60134ca7ec506cfdfc236, type: 3}
   maxRooms: 15
   minRooms: 10
+  gridSizeX: 15
+  gridSizeY: 15
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,7 +230,7 @@ Camera:
   far clip plane: 1000
   field of view: 0.53118634
   orthographic: 1
-  orthographic size: 5.9510694
+  orthographic size: 60
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
