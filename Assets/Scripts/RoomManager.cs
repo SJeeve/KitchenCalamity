@@ -142,19 +142,19 @@ public class RoomManager : MonoBehaviour
         {
             //Right
             newRoomScript.OpenDoor(Vector2Int.right);
-            leftRoomScript.OpenDoor(Vector2Int.left);
+            rightRoomScript.OpenDoor(Vector2Int.left);
         }
         if (y > 0 && roomGrid[x, y - 1] != 0)
         {
             //Down
             newRoomScript.OpenDoor(Vector2Int.down);
-            leftRoomScript.OpenDoor(Vector2Int.up);
+            bottomRoomScript.OpenDoor(Vector2Int.up);
         }
         if (y < gridSizeY - 1 && roomGrid[x, y + 1] != 0)
         {
             //Up
             newRoomScript.OpenDoor(Vector2Int.up);
-            leftRoomScript.OpenDoor(Vector2Int.down);
+            topRoomScript.OpenDoor(Vector2Int.down);
         }
     }
 
