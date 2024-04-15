@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class playermove : MonoBehaviour
 {
+ 
     public float movespeed;
     public Rigidbody2D rb;
     private Vector2 input;
@@ -15,7 +16,9 @@ public class playermove : MonoBehaviour
         input.Normalize();
         rb.velocity = input * movespeed * Time.deltaTime;
 
-
+        
     }
+
+
 
 }
