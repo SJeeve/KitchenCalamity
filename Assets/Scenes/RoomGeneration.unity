@@ -167,6 +167,41 @@ MonoBehaviour:
   roomPrefab: {fileID: 4080586462289575190, guid: 9c2d05ebb15400a4f849ebd68f780636, type: 3}
   maxRooms: 15
   minRooms: 10
+  closeDoors:
+  - {fileID: 11400000, guid: 03be0829c3b333740825c2e2d574cc4d, type: 2}
+  - {fileID: 11400000, guid: c157e7b344c68de4ab4946fd4474420c, type: 2}
+  - {fileID: 11400000, guid: b7ef6cb0b1ff3f24394b6d4543bfde86, type: 2}
+  - {fileID: 11400000, guid: 7bd5124093065fb42b58eeebad7216eb, type: 2}
+  - {fileID: 11400000, guid: 1bb1f0c0b62309a4f8c234ed8192d77b, type: 2}
+  - {fileID: 11400000, guid: bd50b2c26335a5940bd4588c1a6a605d, type: 2}
+  - {fileID: 11400000, guid: b357343cd56854b4dad268ca0d28a6ce, type: 2}
+  - {fileID: 11400000, guid: b6432ee3bc27c1f4fa9c799def0dccf1, type: 2}
+  - {fileID: 11400000, guid: 4bca157dcc5e5bb4fa377584fc1290d7, type: 2}
+  - {fileID: 11400000, guid: bf16230ac6d39e54ba67205379d5ffd7, type: 2}
+  - {fileID: 11400000, guid: 1f7f60cf068d38a4a83a34cbc2eb77d4, type: 2}
+  - {fileID: 11400000, guid: 41a8bea2ab9ce0f45b6b3718c48285b5, type: 2}
+  - {fileID: 11400000, guid: ea67c90f6e54c4943a5f06b9e8c7d279, type: 2}
+  - {fileID: 11400000, guid: 78d9a0fdf0859e14bb04ffa099b79cfd, type: 2}
+  - {fileID: 11400000, guid: 2a168a5dec6f8134aab12ea8c40fd347, type: 2}
+  - {fileID: 11400000, guid: e1b77a9e60951dd44bc3660d8b75bee3, type: 2}
+  openDoors:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  tilemap: {fileID: 0}
   gridSizeX: 15
   gridSizeY: 15
 --- !u!1 &519420028

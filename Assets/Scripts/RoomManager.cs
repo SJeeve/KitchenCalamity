@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class RoomManager : MonoBehaviour
 {
@@ -62,6 +63,7 @@ public class RoomManager : MonoBehaviour
         {
             Debug.Log($"Generation complete, {roomCount} rooms created");
             generationComplete = true;
+
         }
     }
     //Starts generation of rooms
@@ -137,6 +139,7 @@ public class RoomManager : MonoBehaviour
             //Left
             newRoomScript.OpenDoor(Vector2Int.left);
             leftRoomScript.OpenDoor(Vector2Int.right);
+            
         }
         if (x < gridSizeX - 1 && roomGrid[x + 1, y] != 0)
         {

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class Room : MonoBehaviour
 {
@@ -8,6 +9,15 @@ public class Room : MonoBehaviour
     [SerializeField] GameObject bottomDoor;
     [SerializeField] GameObject rightDoor;
     [SerializeField] GameObject leftDoor;
+
+    //SpecialRoom dictates whether a room will generate as a normal or special room
+    /*
+    0 -> normal room
+    1 -> treasure room
+    2 -> shop room
+    3 -> boss room
+    */
+    private int SpecialRoom = 0;
 
     public Vector2Int RoomIndex { get; set; }
 
