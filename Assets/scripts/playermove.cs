@@ -4,38 +4,18 @@ using UnityEngine;
 
 public class playermove : MonoBehaviour
 {
-    public float horizontal;
-    public float vertical;
-    public float speed = 2f;
-    public bool FacingLeft = true;
-
+    public float movespeed;
     public Rigidbody2D rb;
-    public Transform tf;
+    private Vector2 input;
 
-    public void Update()
+    private void Update()
     {
-        horizontal = Input.GetAxisRaw("horizontal");
-        vertical = Input.GetAxisRaw("vertical");
+        input.x = Input.GetAxisRaw("Horizontal");
+        input.y = Input.GetAxisRaw("Vertical");
+        input.Normalize();
+        rb.velocity = input * movespeed * Time.deltaTime;
 
-        if (Input.GetButton )
-        flip();
-    }
 
-    public void FixedUpdate()
-    {
-        rb.velocity = new Vector2 (horizontal * speed, vertical * speed);
-
-    }
-
-    private void flip()
-    {
-        if (!FacingLeft && horizontal < 0f || FacingLeft && horizontal > 0f)
-        {
-            FacingLeft = !FacingLeft;
-            Vector3 v3 = transform.localScale;
-            v3.x *= -1f;
-            transform.localScale = v3;
-        }
     }
 
 }
