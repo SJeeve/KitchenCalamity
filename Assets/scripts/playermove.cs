@@ -8,7 +8,7 @@ public class playermove : MonoBehaviour
     public float movespeed;
     public Rigidbody2D rb;
     private Vector2 input;
-
+    
     private void Update()
     {
         input.x = Input.GetAxisRaw("Horizontal");
