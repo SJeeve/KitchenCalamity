@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
 public class RoomManager : MonoBehaviour
 {
 
-    [SerializeField] GameObject roomPrefab;
+    [SerializeField] private GameObject[] roomPrefab;
     //Max rooms and min rooms count for dungeon generation
     [SerializeField] private int maxRooms = 15;
     [SerializeField] private int minRooms = 10;
@@ -74,7 +75,7 @@ public class RoomManager : MonoBehaviour
         int y = roomIndex.y;
         roomGrid[x, y] = 1;
         roomCount++;
-        var initialRoom = Instantiate(roomPrefab, GetPositionFromGridIndex(roomIndex), Quaternion.identity);
+        var initialRoom = Instantiate(roomPrefab[Random.Range(0, roomPrefab.Count() )], GetPositionFromGridIndex(roomIndex), Quaternion.identity);
         initialRoom.name = $"Room-{roomCount}";
         initialRoom.GetComponent<Room>().RoomIndex = roomIndex;
         roomObjects.Add(initialRoom);
@@ -99,7 +100,7 @@ public class RoomManager : MonoBehaviour
         roomGrid[x, y] = 1;
         roomCount++;
 
-        var newRoom = Instantiate(roomPrefab, GetPositionFromGridIndex(roomIndex), Quaternion.identity);
+        var newRoom = Instantiate(roomPrefab[Random.Range(0, roomPrefab.Count())], GetPositionFromGridIndex(roomIndex), Quaternion.identity);
         newRoom.GetComponent<Room>().RoomIndex = roomIndex;
         newRoom.name = $"Room-{roomCount}";
         roomObjects.Add(newRoom);

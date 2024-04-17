@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d9cf6f6142315124b948554ff07a9ed3
+guid: 48740072f4fb70141abde1a71d69300a
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -3002,7 +3002,7 @@ TextureImporter:
       name: sheet_138
       rect:
         serializedVersion: 2
-        x: 192
+        x: 191
         y: 80
         width: 16
         height: 16
@@ -3020,15 +3020,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheet_139
+      name: TestSpriteSheet
       rect:
         serializedVersion: 2
-        x: 208
+        x: 175
         y: 80
-        width: 16
+        width: 32
         height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3338,8 +3338,8 @@ TextureImporter:
       name: sheet_154
       rect:
         serializedVersion: 2
-        x: 160
-        y: 64
+        x: 190
+        y: 60
         width: 16
         height: 16
       alignment: 0
@@ -5067,6 +5067,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      TestSpriteSheet: -370383944
       sheet_0: 6530179738444782934
       sheet_1: 613435604629981061
       sheet_10: 267593762
@@ -5112,7 +5113,6 @@ TextureImporter:
       sheet_136: 109971885
       sheet_137: 1244017637
       sheet_138: -173691642
-      sheet_139: -370383944
       sheet_14: -1030493404
       sheet_140: 817800005
       sheet_141: -1278055257
