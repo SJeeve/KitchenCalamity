@@ -43,6 +43,7 @@ public class PlayerMoveTD : MonoBehaviour
     {
         if (canMove && moveInput != Vector2.zero)
         {
+            Debug.Log($"canmove == true");
             //Is moving
             rb.velocity = Vector2.ClampMagnitude(rb.velocity + (moveInput * moveSpeed * Time.deltaTime), maxSpeed);
 
