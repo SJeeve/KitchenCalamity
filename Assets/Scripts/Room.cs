@@ -30,7 +30,7 @@ public class Room : MonoBehaviour
 
         if (direction == Vector2Int.down)
         {
-            bottomDoor.SetActive(true);
+            bottomDoor.GetComponentInChildren<SpriteRenderer>();
         }
 
         if (direction == Vector2Int.right)

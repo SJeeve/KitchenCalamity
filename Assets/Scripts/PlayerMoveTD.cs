@@ -57,7 +57,7 @@ public class PlayerMoveTD : MonoBehaviour
             IsMoving = true;
         } else
         {
-            Not moving
+            //Not Moving
             rb.velocity = Vector2.Lerp(rb.velocity, Vector2.zero, idleFriction);
             IsMoving = false;
         }
