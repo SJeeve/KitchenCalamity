@@ -2033,13 +2033,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheet_92
+      name: UpOpenDoor
       rect:
         serializedVersion: 2
         x: 32
-        y: 112
-        width: 16
-        height: 16
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2747,13 +2747,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheet_126
+      name: UpClosedDoor
       rect:
         serializedVersion: 2
         x: 0
-        y: 80
-        width: 16
-        height: 16
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2810,13 +2810,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheet_129
+      name: UpClosedGate
       rect:
         serializedVersion: 2
         x: 48
-        y: 80
-        width: 16
-        height: 16
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2894,13 +2894,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheet_133
+      name: DownOpenDoor
       rect:
         serializedVersion: 2
         x: 112
-        y: 80
-        width: 16
-        height: 16
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3524,13 +3524,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheet_163
+      name: RightOpenDoor
       rect:
         serializedVersion: 2
         x: 0
-        y: 48
-        width: 16
-        height: 16
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3566,13 +3566,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheet_165
+      name: RightClosedDoor
       rect:
         serializedVersion: 2
         x: 32
-        y: 48
-        width: 16
-        height: 16
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3608,13 +3608,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheet_167
+      name: RightClosedGate
       rect:
         serializedVersion: 2
         x: 64
-        y: 48
-        width: 16
-        height: 16
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3671,13 +3671,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheet_170
+      name: DownClosedGate
       rect:
         serializedVersion: 2
         x: 112
-        y: 48
-        width: 16
-        height: 16
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3713,13 +3713,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheet_172
+      name: LeftOpenDoor
       rect:
         serializedVersion: 2
         x: 144
-        y: 48
-        width: 16
-        height: 16
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4091,7 +4091,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheet_190
+      name: LeftClosedDoor
       rect:
         serializedVersion: 2
         x: 144
@@ -4427,13 +4427,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheet_206
+      name: DownClosedDoor
       rect:
         serializedVersion: 2
         x: 96
-        y: 16
-        width: 16
-        height: 16
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4527,27 +4527,6 @@ TextureImporter:
       bones: []
       spriteID: f856c711c7303a9458b7d32a5737dd3e
       internalID: 554483730
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheet_211
-      rect:
-        serializedVersion: 2
-        x: 176
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f349d1fb1ce700a4588503b236c4fa40
-      internalID: 1940941536
       vertices: []
       indices: 
       edges: []
@@ -4931,13 +4910,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheet_230
+      name: LeftClosedGate
       rect:
         serializedVersion: 2
-        x: 192
+        x: 176
         y: 0
-        width: 16
-        height: 16
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5067,7 +5046,19 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      DownClosedDoor: -222297049
+      DownClosedGate: -1274862764
+      DownOpenDoor: -1775014063
+      LeftClosedDoor: 1240628863
+      LeftClosedGate: -556450420
+      LeftOpenDoor: 1907414390
+      RightClosedDoor: -2087226608
+      RightClosedGate: -1219886717
+      RightOpenDoor: -2001529702
       TestSpriteSheet: -370383944
+      UpClosedDoor: 1057713034
+      UpClosedGate: 1826193751
+      UpOpenDoor: 1453693150
       sheet_0: 6530179738444782934
       sheet_1: 613435604629981061
       sheet_10: 267593762
@@ -5099,15 +5090,12 @@ TextureImporter:
       sheet_123: 1531906819
       sheet_124: 26119573
       sheet_125: -691213709
-      sheet_126: 1057713034
       sheet_127: -1089669436
       sheet_128: -1321628011
-      sheet_129: 1826193751
       sheet_13: -828062657
       sheet_130: -1904092797
       sheet_131: 2102391213
       sheet_132: -339563156
-      sheet_133: -1775014063
       sheet_134: 1157089741
       sheet_135: -2065460756
       sheet_136: 109971885
@@ -5139,17 +5127,12 @@ TextureImporter:
       sheet_160: 617889684
       sheet_161: 289401906
       sheet_162: -1900770287
-      sheet_163: -2001529702
       sheet_164: -212349326
-      sheet_165: -2087226608
       sheet_166: -1783308967
-      sheet_167: -1219886717
       sheet_168: -1831620791
       sheet_169: 1051338714
       sheet_17: 1060928036
-      sheet_170: -1274862764
       sheet_171: -246677724
-      sheet_172: 1907414390
       sheet_173: -1080208082
       sheet_174: -1333363887
       sheet_175: 835613515
@@ -5169,7 +5152,6 @@ TextureImporter:
       sheet_188: -1770109444
       sheet_189: -935668285
       sheet_19: -828869651
-      sheet_190: 1240628863
       sheet_191: 1807256310
       sheet_192: 582422445
       sheet_193: 1908739415
@@ -5187,7 +5169,6 @@ TextureImporter:
       sheet_203: 1902137301
       sheet_204: 1721012901
       sheet_205: -1954420181
-      sheet_206: -222297049
       sheet_207: 1500939391
       sheet_208: 379734124
       sheet_209: -488827118
@@ -5214,7 +5195,6 @@ TextureImporter:
       sheet_228: -1646424758
       sheet_229: 2101879525
       sheet_23: -1514947019
-      sheet_230: -556450420
       sheet_231: -354953894
       sheet_232: -915715576
       sheet_233: 1105697253
@@ -5295,7 +5275,6 @@ TextureImporter:
       sheet_9: 127054026
       sheet_90: 1529173485
       sheet_91: 976424436
-      sheet_92: 1453693150
       sheet_93: -2040253292
       sheet_94: 871225746
       sheet_95: -1302744486
