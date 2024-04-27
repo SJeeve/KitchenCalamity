@@ -10,6 +10,8 @@ public class SwordHitbox : MonoBehaviour
 
     public float swordDamage = 1f;
 
+    public float entityid = 1f;
+
     void Start()
     {
         if(swordCollider == null)
@@ -17,8 +19,14 @@ public class SwordHitbox : MonoBehaviour
             Debug.LogWarning("Sword Collider not set");
         }
     }
+   /* public void OnCollisionEnter2D(Collision2D collision)
+    {
+        collision.collider.SendMessage("OnHit", swordDamage);
+    } */
 
-    void OnTriggerEnter2D(Collider2D collider) {
-        collider.SendMessage("OnHit", swordDamage);
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        collision.SendMessage("OnHit", swordDamage);
     }
+
 }

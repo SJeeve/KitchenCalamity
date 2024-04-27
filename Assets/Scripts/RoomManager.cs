@@ -96,6 +96,9 @@ public class RoomManager : MonoBehaviour
         if (CountAdjacentRooms(roomIndex) > 1)
             return false;
 
+        if (roomGrid[x, y] == 1)
+            return false;
+
         roomQueue.Enqueue(roomIndex);
         roomGrid[x, y] = 1;
         roomCount++;
