@@ -268,7 +268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c30b7932f9497e4e86fb1545016a60a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newCamPos: {x: -20, y: 0, z: 0}
+  newCamPos: {x: -30, y: 0, z: 0}
   newPlayerPos: {x: -4.5, y: 0, z: 0}
 --- !u!1 &7113682591656692278
 GameObject:
