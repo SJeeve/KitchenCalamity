@@ -165,10 +165,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomPrefab:
-  - {fileID: 4080586462289575190, guid: 9c2d05ebb15400a4f849ebd68f780636, type: 3}
-  - {fileID: 4080586462289575190, guid: f271f8e6b2161f64c9bf94c4c0e5dc1c, type: 3}
-  maxRooms: 15
-  minRooms: 10
+  - {fileID: 4080586462289575190, guid: 039dd9d3b5af5bd4a878261bf8baeecf, type: 3}
+  maxRooms: 13
+  minRooms: 8
   gridSizeX: 15
   gridSizeY: 15
 --- !u!1001 &268988774
@@ -298,7 +297,7 @@ Camera:
   far clip plane: 1000
   field of view: 0.53118634
   orthographic: 1
-  orthographic size: 5.75
+  orthographic size: 8.75
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -478,7 +477,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 2be621c1563984c42897c687558644ce, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -518,8 +517,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 608010099d8f792498b1825034992d47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 150
-  maxSpeed: 8
+  moveSpeed: 450
+  maxSpeed: 18
   swordHitbox: {fileID: 1980316486}
   idleFriction: 0.9
 --- !u!50 &1938556618
