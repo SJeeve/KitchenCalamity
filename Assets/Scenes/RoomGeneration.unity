@@ -168,6 +168,8 @@ MonoBehaviour:
   - {fileID: 4080586462289575190, guid: 039dd9d3b5af5bd4a878261bf8baeecf, type: 3}
   maxRooms: 13
   minRooms: 8
+  roomWidth: 30
+  roomHeight: 18
   gridSizeX: 15
   gridSizeY: 15
 --- !u!1001 &268988774

@@ -32,6 +32,12 @@ public class PlayerMoveTD : MonoBehaviour
 
     Vector2 moveInput = Vector2.zero;
 
+    Vector3 playerScreenPoint;
+
+    float swordX;
+    float swordY;
+
+
     bool isMoving = false;
     bool canMove = true;
 
@@ -40,24 +46,34 @@ public class PlayerMoveTD : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        swordCollider = swordHitbox.GetComponent<Collider2D>();    
+        swordCollider = swordHitbox.GetComponent<Collider2D>();
+        playerScreenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
+        swordX = gameObject.transform.GetChild(0).gameObject.transform.position.x;
+        swordY = gameObject.transform.GetChild(0).gameObject.transform.position.y;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        playerScreenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
+        if (Input.mousePosition.x > playerScreenPoint.x)
+        {
+            spriteRenderer.flipX = true;
+        } else if (Input.mousePosition.x < playerScreenPoint.x) { 
+            spriteRenderer.flipX = false;
+        }
         if (canMove && moveInput != Vector2.zero)
         {
             //Is moving
             rb.velocity = Vector2.ClampMagnitude(rb.velocity + (moveInput * moveSpeed * Time.deltaTime), maxSpeed);
 
-            if (moveInput.x > 0)
+            /*if (moveInput.x > 0)
             {
                 spriteRenderer.flipX = true;
             } else if (moveInput.x < 0)
             {
                 spriteRenderer.flipX = false;
-            }
+            }*/
 
             IsMoving = true;
         } else
@@ -74,9 +90,21 @@ public class PlayerMoveTD : MonoBehaviour
     {
         moveInput = value.Get<Vector2>();
     }
+    void positionSwordHitbox()
+    {
+        if (Input.mousePosition.x > playerScreenPoint.x)
+        {
+            gameObject.transform.GetChild(0).gameObject.transform.position = new Vector3(swordX * -1 + gameObject.transform.position.x, swordY + gameObject.transform.position.y, gameObject.transform.position.z);
+        }
+        else if (Input.mousePosition.x < playerScreenPoint.x)
+        {
+            gameObject.transform.GetChild(0).gameObject.transform.position = new Vector3(swordX + gameObject.transform.position.x, swordY + gameObject.transform.position.y, gameObject.transform.position.z);
+        }
 
+    }
     void OnFire()
     {
+        positionSwordHitbox();
         animator.SetTrigger("swordAttack");
     }
 
