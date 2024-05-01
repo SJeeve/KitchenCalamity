@@ -37,6 +37,6 @@ public class DestroyEnemy : StateMachineBehaviour
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         GameObject entity = animator.gameObject;
-        Destroy(entity);
+        //Destroy(entity);
     }
 }

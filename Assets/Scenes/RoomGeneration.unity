@@ -180,6 +180,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4852314878802672302, guid: e760eb8b368d78d43b1ff82894313b05, type: 3}
+      propertyPath: m_LinearDrag
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: -1564799878675543871, guid: e760eb8b368d78d43b1ff82894313b05, type: 3}
       propertyPath: animator
       value: 
@@ -709,6 +713,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   swordCollider: {fileID: 1980316488}
+  knockbackForce: 1000
   swordDamage: 1
   entityid: 1
 --- !u!1660057539 &9223372036854775807

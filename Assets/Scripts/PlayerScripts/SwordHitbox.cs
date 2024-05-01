@@ -7,6 +7,7 @@ public class SwordHitbox : MonoBehaviour
     // Start is called before the first frame update
 
     public Collider2D swordCollider;
+    public float knockbackForce = 1000f;
 
     public float swordDamage = 1f;
 
@@ -24,9 +25,21 @@ public class SwordHitbox : MonoBehaviour
         collision.collider.SendMessage("OnHit", swordDamage);
     } */
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collider)
     {
-        collision.SendMessage("OnHit", swordDamage);
+        IDamageable damagebleObject = (IDamageable) collider.GetComponent<IDamageable>();
+
+        if (damagebleObject != null)
+        {
+            Vector3 parentPosition = gameObject.GetComponentInParent<Transform>().position;
+
+            Vector2 direction = (Vector2) (collider.gameObject.transform.position - parentPosition).normalized;
+            Vector2 knockback = direction * knockbackForce;
+
+            damagebleObject.OnHit(swordDamage, knockback);
+        } else {
+            Debug.LogWarning("Collider does not implement IDamageable");
+        }
     }
 
 }
