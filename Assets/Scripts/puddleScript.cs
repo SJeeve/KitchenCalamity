@@ -57,8 +57,8 @@ public class puddleScript : MonoBehaviour, IDamageable
         rb.AddForce(knockback);
     }
 
-    public void DestroySelf()
+    public void OnObjectDestroyed()
     {
-        DestroySelf();
+        Destroy(gameObject);
     }
 }

@@ -8,5 +8,5 @@ public interface IDamageable
     public bool Targetable { get; set; }
     public void OnHit(float damage, UnityEngine.Vector2 knockback);
     public void OnHit(float damage);
-    public void DestroySelf();
+    public void OnObjectDestroyed();
 }
