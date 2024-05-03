@@ -188,6 +188,10 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 576425671}
+    - target: {fileID: 3741775842533199107, guid: e760eb8b368d78d43b1ff82894313b05, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: cd855025da3bd9345a7e3821f729eacd, type: 3}
     - target: {fileID: 3896396087545808724, guid: e760eb8b368d78d43b1ff82894313b05, type: 3}
       propertyPath: m_Name
       value: PuddleEnemy1
