@@ -489,7 +489,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7943677465810370145, guid: f31af1924704af84cba4e131b08caf07, type: 3}
       propertyPath: m_LinearDrag
-      value: 25
+      value: 0.75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
