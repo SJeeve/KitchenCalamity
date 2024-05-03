@@ -55,6 +55,7 @@ public class PlayerMoveTD : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        //Flip player direction based on mouse
         playerScreenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
         if (Input.mousePosition.x > playerScreenPoint.x)
         {
@@ -62,25 +63,25 @@ public class PlayerMoveTD : MonoBehaviour
         } else if (Input.mousePosition.x < playerScreenPoint.x) { 
             spriteRenderer.flipX = false;
         }
+
         if (canMove && moveInput != Vector2.zero)
         {
             //Is moving
-            rb.velocity = Vector2.ClampMagnitude(rb.velocity + (moveInput * moveSpeed * Time.deltaTime), maxSpeed);
+            //rb.velocity = Vector2.ClampMagnitude(rb.velocity + (moveInput * moveSpeed * Time.deltaTime), maxSpeed);
 
-            /*if (moveInput.x > 0)
-            {
-                spriteRenderer.flipX = true;
-            } else if (moveInput.x < 0)
-            {
-                spriteRenderer.flipX = false;
-            }*/
+            rb.AddForce(moveInput * moveSpeed * Time.deltaTime);
+
+            if(rb.velocity.magnitude > maxSpeed) {
+                float limitedSpeed = Mathf.Lerp(rb.velocity.magnitude, maxSpeed, idleFriction);
+                rb.velocity = rb.velocity.normalized* limitedSpeed;
+            }
 
             IsMoving = true;
         } else
         {
             //Not Moving
             //Line below from earlier, delete soon
-            //rb.velocity = Vector2.Lerp(rb.velocity, Vector2.zero, idleFriction);
+            rb.velocity = Vector2.Lerp(rb.velocity, Vector2.zero, idleFriction);
             IsMoving = false;
         }
     }

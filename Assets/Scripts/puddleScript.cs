@@ -6,13 +6,20 @@ public class puddleScript : MonoBehaviour
 {
     public float damage = 1;
 
-    public void OnCollisionEnter2D(Collision2D col)
+    public float knockbackForce = 100f;
+    public void OnCollisionEnter2D(Collision2D collider)
     {
-        IDamageable damageable = col.collider.GetComponent<IDamageable>();
+        IDamageable damageable = collider.collider.GetComponent<IDamageable>();
 
         if (damageable != null)
         {
-            damageable.OnHit(damage);
+
+            Vector3 parentPosition = gameObject.GetComponentInParent<Transform>().position;
+
+            Vector2 direction = (Vector2)(collider.gameObject.transform.position - transform.position).normalized;
+            Vector2 knockback = direction * knockbackForce;
+
+            damageable.OnHit(damage, knockback);
         }
     }
 }
