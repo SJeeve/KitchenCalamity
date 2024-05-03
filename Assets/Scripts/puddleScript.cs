@@ -2,63 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class puddleScript : MonoBehaviour, IDamageable
+public class puddleScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    [SerializeField] public Animator animator;
+    public float damage = 1;
 
-    bool Alive = true;
-    Rigidbody2D rb;
-    Collider2D physicsCollider;
-    public float Health
+    public float knockbackForce = 100f;
+    public void OnCollisionEnter2D(Collision2D collider)
     {
-        set
+        IDamageable damageable = collider.collider.GetComponent<IDamageable>();
+
+        if (damageable != null)
         {
-            if(value < _health)
-            {
-                animator.SetTrigger("Hit");
-            }
-            _health = value;
 
-            if (_health <= 0)
-            {
-                animator.SetBool("Alive", false);
-                Targetable = false;
-            }
+            Vector3 parentPosition = gameObject.GetComponentInParent<Transform>().position;
+
+            Vector2 direction = (Vector2)(collider.gameObject.transform.position - transform.position).normalized;
+            Vector2 knockback = direction * knockbackForce;
+
+            damageable.OnHit(damage, knockback);
         }
-        get { return _health; }
-    }
-
-    public bool Targetable { get { return _targetable; } 
-    set {
-            _targetable = value;
-
-            rb.simulated = value;
-            physicsCollider.enabled = value;
-        }
-    }
-
-    public float _health = 3;
-    public bool _targetable = true;
-    public void Start()
-    {
-        animator.SetBool("Alive", true);
-
-        rb = GetComponent<Rigidbody2D>();
-        physicsCollider = GetComponent<Collider2D>();
-    }
-    public void OnHit(float damage) {
-        Health -= damage;
-    }
-
-    public void OnHit(float damage, Vector2 knockback)
-    {
-        Health -= damage;
-        rb.AddForce(knockback);
-    }
-
-    public void OnObjectDestroyed()
-    {
-        Destroy(gameObject);
     }
 }
