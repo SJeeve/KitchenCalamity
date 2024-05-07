@@ -1,0 +1,6 @@
+In each level designate one room as boss, one as shop, and one as reward room
+Create different room designs for normal rooms
+Empty starter room (maybe)
+Enemy layout from pool of possible layouts
+Keep rooms flat for easier generation
+Make boss room generate on edges of map (could just make it the last room generated)
