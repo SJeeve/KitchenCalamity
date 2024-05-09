@@ -6,6 +6,7 @@ public class camerafollow : MonoBehaviour
 {
     public Transform target;
     public Vector3 offset;
+    [Range(0,1)] 
     public float damping;
 
     private Vector3 velocity = Vector3.zero;
