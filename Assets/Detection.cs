@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Detection : MonoBehaviour
+public class DetectionZone : MonoBehaviour
 {
     public string tagTarget = "Player";
     public List<Collider2D> detectedObject = new List<Collider2D>();
