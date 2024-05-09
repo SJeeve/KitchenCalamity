@@ -60,6 +60,7 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
 
     public void OnHit(float damage, Vector2 knockback)
     {
+        animator.SetTrigger("Hit");
         Health -= damage;
         rb.AddForce(knockback);
     }
