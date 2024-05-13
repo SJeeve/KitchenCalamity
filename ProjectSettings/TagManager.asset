@@ -8,6 +8,7 @@ TagManager:
   - BossRoom
   - ShopRoom
   - TreasureRoom
+  - Enemy
   layers:
   - Default
   - TransparentFX
