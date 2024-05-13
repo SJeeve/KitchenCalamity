@@ -26,25 +26,20 @@ public class Room : MonoBehaviour
         if(direction == Vector2Int.up)
         {
             topDoor.transform.GetChild(0).gameObject.SetActive(true);
-            //topDoor.GetComponent<BoxCollider2D>().enabled = false;
         }
 
         if (direction == Vector2Int.down)
         {
-            bottomDoor.transform.GetChild(0).gameObject.SetActive(true);
-            //bottomDoor.GetComponent<BoxCollider2D>().enabled = false;
-        }
+            bottomDoor.transform.GetChild(0).gameObject.SetActive(true);        }
 
         if (direction == Vector2Int.right)
         {
             rightDoor.transform.GetChild(0).gameObject.SetActive(true);
-            //rightDoor.GetComponent<BoxCollider2D>().enabled = false;
         }
 
         if (direction == Vector2Int.left)
         {
             leftDoor.transform.GetChild(0).gameObject.SetActive(true);
-            //leftDoor.GetComponent<BoxCollider2D>().enabled = false;
         }
     }
 }
