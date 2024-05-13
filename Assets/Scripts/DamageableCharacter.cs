@@ -67,6 +67,7 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
 
     public void OnObjectDestroyed()
     {
+
         Destroy(gameObject);
     }
 
