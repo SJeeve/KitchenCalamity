@@ -166,6 +166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomPrefab:
   - {fileID: 4080586462289575190, guid: 039dd9d3b5af5bd4a878261bf8baeecf, type: 3}
+  - {fileID: 4080586462289575190, guid: 03122401819ef4e4a8ee10ebfe73f4f8, type: 3}
   maxRooms: 13
   minRooms: 8
   roomWidth: 30
@@ -310,6 +311,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f1882dff0e49b64fbf78d510a6ddb15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  detection_script: {fileID: 0}
+  doors_script: {fileID: 0}
+  upOpen: {fileID: 0}
+  downOpen: {fileID: 0}
+  leftOpen: {fileID: 0}
+  rightOpen: {fileID: 0}
+  upClosed: {fileID: 0}
+  downClosed: {fileID: 0}
+  leftClosed: {fileID: 0}
+  rightClosed: {fileID: 0}
 --- !u!4 &1455894880
 Transform:
   m_ObjectHideFlags: 0
@@ -330,63 +341,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7020956152567005203, guid: f31af1924704af84cba4e131b08caf07, type: 3}
   m_PrefabInstance: {fileID: 5890835146726570106}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &5074294118446905315
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1514213677744485053, guid: bc5146c67c1b8bf4fbae810a43d309fd, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2.87
-      objectReference: {fileID: 0}
-    - target: {fileID: 1514213677744485053, guid: bc5146c67c1b8bf4fbae810a43d309fd, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.143
-      objectReference: {fileID: 0}
-    - target: {fileID: 1514213677744485053, guid: bc5146c67c1b8bf4fbae810a43d309fd, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1514213677744485053, guid: bc5146c67c1b8bf4fbae810a43d309fd, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1514213677744485053, guid: bc5146c67c1b8bf4fbae810a43d309fd, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1514213677744485053, guid: bc5146c67c1b8bf4fbae810a43d309fd, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1514213677744485053, guid: bc5146c67c1b8bf4fbae810a43d309fd, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1514213677744485053, guid: bc5146c67c1b8bf4fbae810a43d309fd, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1514213677744485053, guid: bc5146c67c1b8bf4fbae810a43d309fd, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1514213677744485053, guid: bc5146c67c1b8bf4fbae810a43d309fd, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1897434788347677786, guid: bc5146c67c1b8bf4fbae810a43d309fd, type: 3}
-      propertyPath: m_Name
-      value: PuddleEnemy
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: bc5146c67c1b8bf4fbae810a43d309fd, type: 3}
 --- !u!1001 &5890835146726570106
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -464,4 +418,3 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 33984241}
   - {fileID: 5890835146726570106}
-  - {fileID: 5074294118446905315}
